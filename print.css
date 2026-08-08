@@ -1,0 +1,110 @@
+/* Print / Save-as-PDF stylesheet */
+@page {
+  margin: 1.4cm;
+}
+
+@media print {
+  body {
+    background: #fff !important;
+    color: #111 !important;
+    font-size: 11pt;
+    line-height: 1.45;
+  }
+
+  nav,
+  .tools,
+  .cta,
+  .hero-media,
+  .orb,
+  footer .wrap > div:last-child p:last-child {
+    display: none !important;
+  }
+
+  .hero-full,
+  .hero-page {
+    min-height: 0 !important;
+    padding: 0 0 18pt !important;
+    color: #111 !important;
+    display: block !important;
+  }
+
+  .hero-brand,
+  .hero-page h1,
+  .hero-full h1,
+  h1, h2, h3,
+  .big-quote,
+  blockquote,
+  .stat .s .n,
+  footer strong {
+    color: #111 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .hero-full .sub,
+  .hero-page .sub,
+  .lede,
+  .muted,
+  .stack-item p,
+  .topic p,
+  .t-item p,
+  .callout p,
+  a {
+    color: #333 !important;
+  }
+
+  .eyebrow,
+  .eyebrow-light,
+  .t-item .tm,
+  .stack-item .num,
+  .aid-step .n {
+    color: #555 !important;
+  }
+
+  section,
+  section.band,
+  section.dark,
+  footer {
+    background: transparent !important;
+    padding: 16pt 0 !important;
+    break-inside: avoid;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .rule { background: #ccc !important; }
+
+  .btn {
+    border: 1px solid #999 !important;
+    color: #111 !important;
+    background: transparent !important;
+  }
+
+  .tag {
+    border-color: #999 !important;
+    color: #333 !important;
+  }
+
+  .table-scroll { overflow: visible !important; border-color: #ccc !important; }
+  table.cmp { min-width: 0 !important; }
+  table.cmp th,
+  table.cmp td { border-color: #ccc !important; color: #222 !important; }
+
+  .lookup-box input { display: none !important; }
+  .lookup-results .lookup-item { break-inside: avoid; }
+
+  a[href]::after {
+    content: none !important;
+  }
+
+  .wrap,
+  .wrap.wide {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
