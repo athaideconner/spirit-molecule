@@ -25,6 +25,13 @@ Then open the URL shown in the terminal (e.g. `http://localhost:3000`).
 
 Print / Save PDF uses the browser print dialog (`print.css`).
 
+## Production extras
+
+- `favicon.svg` — site icon
+- `robots.txt` + `sitemap.xml` — crawl hints for the GitHub Pages URL
+- Open Graph / Twitter meta tags on every page
+- Mobile nav menu (hamburger under ~760px)
+
 ## Host it online
 
 This is a plain static site — drop the folder on any static host.
