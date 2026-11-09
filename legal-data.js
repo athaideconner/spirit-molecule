@@ -1,31 +1,33 @@
 window.DMT_LEGAL = [
   {
     country: "United States",
+    aliases: ["USA", "US", "America", "Colorado", "Oregon"],
     region: "North America",
     status: "mixed",
     label: "Federally illegal · local exceptions",
-    summary: "Federally Schedule I. Some cities have deprioritized entheogenic plants; Colorado includes DMT in a natural-medicine framework. Narrow religious ayahuasca exemptions exist for specific churches. Verify state and city law."
+    summary: "Federally Schedule I. A few cities have deprioritized enforcement on entheogenic plants. Colorado decriminalized personal use (not sale) of DMT in 2022; its regulated healing centers opened with psilocybin only, and the law lets the state consider adding DMT after June 1, 2026 — check Colorado DORA for the current status. Narrow, church-specific religious exemptions exist for ayahuasca (e.g., UDV, some Santo Daime churches). Verify state and city law."
   },
   {
     country: "Canada",
     region: "North America",
     status: "illegal",
     label: "Illegal outside exemptions",
-    summary: "Controlled substance. Possession/production/trafficking prohibited outside authorized research or specific exemptions. Not a general personal-use pathway."
+    summary: "Controlled substance. Since 2017 Health Canada has granted case-by-case section 56 exemptions to a few ayahuasca churches (Santo Daime and UDV congregations) for ceremonial use. Those exemptions cover only the named groups — there is no general personal-use or retreat pathway."
   },
   {
     country: "Mexico",
     region: "North America",
     status: "mixed",
     label: "Complex / evolving",
-    summary: "Federal controls apply; indigenous ceremonial contexts and court developments have created a nuanced picture. Do not assume legality — check current Mexican law and local practice carefully."
+    summary: "DMT is scheduled under the General Health Law. Brewed ayahuasca is not explicitly named, and ceremonial retreats (e.g., around Tulum) are often tolerated — but tolerance is not legal protection, and customs seizures of ayahuasca have happened. Check current Mexican law carefully."
   },
   {
     country: "United Kingdom",
+    aliases: ["UK", "Britain", "Great Britain", "England", "Scotland", "Wales", "Northern Ireland"],
     region: "Europe",
     status: "illegal",
     label: "Class A",
-    summary: "DMT is a Class A controlled drug. Unlawful production, supply, and possession can carry severe penalties."
+    summary: "DMT is a Class A controlled drug, and UK courts have treated ayahuasca as a preparation containing it. Unlawful production, supply, and possession can carry severe penalties."
   },
   {
     country: "Ireland",
@@ -36,6 +38,7 @@ window.DMT_LEGAL = [
   },
   {
     country: "Netherlands",
+    aliases: ["Holland"],
     region: "Europe",
     status: "illegal",
     label: "Illegal (tightened)",
@@ -85,6 +88,7 @@ window.DMT_LEGAL = [
   },
   {
     country: "Czech Republic",
+    aliases: ["Czechia"],
     region: "Europe",
     status: "mixed",
     label: "Controlled · threshold nuances",
@@ -95,14 +99,14 @@ window.DMT_LEGAL = [
     region: "South America",
     status: "traditional",
     label: "Religious ceremonial pathway",
-    summary: "Ayahuasca has recognized religious/ceremonial use under specific frameworks. Pure DMT outside those contexts remains controlled. Context matters enormously."
+    summary: "Religious use of ayahuasca is legally recognized (CONAD Resolution 1/2010). The same framework discourages commercial sale, tourism, and unproven therapeutic claims, so paid retreats sit in a gray zone. Pure DMT outside those contexts remains controlled."
   },
   {
     country: "Peru",
     region: "South America",
     status: "traditional",
     label: "Cultural heritage (ayahuasca)",
-    summary: "Ayahuasca is recognized as cultural heritage and used in traditional/ceremonial settings. This does not mean all DMT products are unregulated tourist free-for-alls — laws and safety still apply."
+    summary: "Traditional ayahuasca use has been protected as national cultural heritage since 2008. Retreat centers are not licensed or regulated by the government, and in January 2025 the U.S. Embassy warned travelers about deaths, sexual assaults and robberies at 'healing' centers. Synthetic or extracted DMT is still controlled."
   },
   {
     country: "Colombia",
@@ -120,7 +124,6 @@ window.DMT_LEGAL = [
   },
   {
     country: "Argentina",
-    countryAliases: ["Argentina"],
     region: "South America",
     status: "illegal",
     label: "Controlled",
@@ -179,14 +182,14 @@ window.DMT_LEGAL = [
     country: "Costa Rica",
     region: "Central America",
     status: "mixed",
-    label: "Gray / high caution",
-    summary: "Often associated with wellness tourism and ceremonies, but legal status is not a simple green light. Confirm current Costa Rican law before assuming protection."
+    label: "Gray · health-ministry warning",
+    summary: "DMT is controlled and ayahuasca has no health registration. In January 2025 the Ministry of Health warned the public not to consume ayahuasca or ibogaine or join rituals offering them, and asked people to report centers promoting them for healing. Some retreats say they hold health permits — verify directly with the Ministry."
   },
   {
     country: "Jamaica",
     region: "Caribbean",
     status: "mixed",
     label: "Context-dependent",
-    summary: "Known for some plant-medicine and research tourism contexts; DMT/ayahuasca legality is not blanket permission. Verify before travel or participation."
+    summary: "Jamaica's legal retreat scene centers on psilocybin mushrooms, which are widely treated as unscheduled. DMT is a different matter: treat DMT and ayahuasca as controlled unless a qualified local lawyer confirms otherwise."
   }
 ];

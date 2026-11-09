@@ -93,8 +93,22 @@
   table.cmp th,
   table.cmp td { border-color: #ccc !important; color: #222 !important; }
 
-  .lookup-box input { display: none !important; }
-  .lookup-results .lookup-item { break-inside: avoid; }
+  .lookup-box input,
+  .chips,
+  #retreat-count,
+  #retreat-empty { display: none !important; }
+  .lookup-results .lookup-item,
+  .dir-item,
+  .aid-step { break-inside: avoid; }
+  /* Print the whole directory even if a filter is active on screen */
+  .dir-item[hidden] { display: block !important; }
+  .dir-item .where,
+  .dir-facts dt { color: #555 !important; }
+  .dir-facts dd,
+  .aid-step p,
+  .do-dont li,
+  ul.clean li,
+  ol.refs { color: #333 !important; }
 
   a[href]::after {
     content: none !important;

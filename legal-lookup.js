@@ -4,6 +4,12 @@
   const results = document.getElementById('legal-results');
   if (!input || !results) return;
 
+  function esc(str) {
+    return String(str).replace(/[&<>"']/g, (c) => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[c]));
+  }
+
   function tagClass(status) {
     if (status === 'illegal') return 'illegal';
     if (status === 'traditional') return 'traditional';
@@ -18,23 +24,27 @@
     results.innerHTML = list.map((item) => `
       <article class="lookup-item">
         <div class="top">
-          <h3>${item.country}</h3>
-          <span class="tag ${tagClass(item.status)}">${item.label}</span>
+          <h3>${esc(item.country)}</h3>
+          <span class="tag ${tagClass(item.status)}">${esc(item.label)}</span>
         </div>
-        <p>${item.summary}</p>
+        <p>${esc(item.summary)}</p>
       </article>
     `).join('');
   }
 
+  function byName(a, b) { return a.country.localeCompare(b.country); }
+
   function filter(q) {
     const query = q.trim().toLowerCase();
-    if (!query) return data.slice().sort((a, b) => a.country.localeCompare(b.country));
+    if (!query) return data.slice().sort(byName);
+    // Two-letter codes would substring-match lots of names ("us" → Australia), so match them exactly.
+    if (query === 'us') return data.filter((item) => item.country === 'United States');
+    if (query === 'uk') return data.filter((item) => item.country === 'United Kingdom');
     return data.filter((item) => {
-      const hay = `${item.country} ${item.region} ${item.label} ${item.summary}`.toLowerCase();
-      if (query === 'uk' && item.country === 'United Kingdom') return true;
-      if (query === 'usa' || query === 'us') return item.country === 'United States';
+      const aliases = (item.aliases || []).join(' ');
+      const hay = `${item.country} ${aliases} ${item.region} ${item.label} ${item.summary}`.toLowerCase();
       return hay.includes(query);
-    }).sort((a, b) => a.country.localeCompare(b.country));
+    }).sort(byName);
   }
 
   render(filter(''));
